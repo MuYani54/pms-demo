@@ -1,0 +1,71 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /pms
+
+spring:
+  redis:
+    database: 0
+    host: localhost         # Redis服务器地址
+    port: 6379              # Redis服务器连接端口
+    password:               # Redis服务器连接密码（默认为空）
+
+  main:
+    allow-circular-references: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/pms?characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 5201314.98
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 5000
+      maximum-pool-size: 200
+      minimum-idle: 5
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy #开启驼峰命名
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect #建表时指定使用innodb 引擎
+
+  thymeleaf:
+    cache: false
+    mode: HTML5
+
+  quartz:
+    job-store-type: memory
+    properties:
+      org:
+        quartz:
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 2
+
+jwt:
+  expiration: 30 # 过期时间 单位分钟
+  time-out: 30   # 超时时间 单位分钟
+  secret: uKd?J|tt9wE[._U+$==X?-@#NZ\,Um=@
+
+sys:
+  initPassword: 123123
+
+logging:
+  config: classpath:logback-test.xml
+
+qiniu:
+  oos:
+    AccessKey: 1c611FXpkgS-Pn72mOEO2Qpi2SjH1BvunKnuGV4W
+    SecretKey: svnb40h-tDXlJEvMkAwQmtMt77B3bBef0zxyhaSZ
+    bucket: pms
+    domain: http://pux0w2a64.bkt.clouddn.com
+
+#alipay:
+#  appId: 2021000122687755
+#  appPrivateKey: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqdRMDN/C/I1f2H5gCuoQUMrHdOSRJRe8VY6RN490aaHddCBEwkRFR/Qdg0+fquRnWPYig9XLsN6T/eCvBE80Kf6hpW2Fgwjr1XYBsUBDC9tdSjFN0JtqpDZKmLZZRUrIZfUFD/uBx6V4mwC+eAB4GNPcocrK/Pl9k2ztNbe5SgsQ9nan0TkMZe66Ulsk3NG00VorFOFbRLStdj4cWeq5glR+NKeYtAptP+5uw0L4/J8TVDx94cyiKThAXmA1vxJrblUAOvsh3crIx26rCoRzPQWdIcXEbbISwlUW/KbOaKqrpE1aUM2dMCipUPBSU5RUbGdop832scQVgWFHhhiNdAgMBAAECggEAbavBvdJiLThaQdr1/NtwW2Z6lbFMLXC3cPWZIxw2h+Uq10p3dN4BXNUFyEDO+HB7tSIGJDmH5X+vw0bYL/PDervD6XWH469UK8Yq+IVTI32Z8Fyk3RiamyZGcnDmRBCG0muKcGsukVvq3dfNS0UcDDZLx1R0uSMyUTvUne7a5W56kbeiPMwnxmz40/Q5ArjGiFb89JTMl32XbUYqCs8jspPttaI6pHHKRZ3+G9Oye3cC7FB91FM3Ez5ihhWio1/GZYXmo55TTSxQUcoItDGpfWgqp++SiwobCKdAQ4LQ2B8MaOiPQDsAA1dmS7KmWEYsvnSJwACBc+hJWZ6UZHsdAQKBgQDrEzyhjVcXgEbjpcFGFUOhpycwdlfmjgHWgK+sKCtr3i9J7ysz77kURkvgDIDR/F6u3CtNVb4tL+YzD2IoJqHZkSSSYYDrcYee4SOuozQrolm/N9ARMUYGM/Bufj7pQNDqgA7mzuxx4DRWcZrkyzOGyJ7EyeneXrdb6zwAxEHmvQKBgQC5oVysh5DRXTfCj6ek61yHHBSkwZzPVhYNYwoK1tfY9/auLlhazBrAEx6bj/++g1mjxriB+mM3zstyAV+Tj4Xyya3vr6oPOSM5snOPGBCjCDNEcoipa+nE4miJIugRf5BK2+2MC7CfAEfcJcvOeO5GOnq+BNJaXkPPvkgaQqHJIQKBgQDD4Ym6TJ5v1NI9S5eboIh0oWaEeXiRg2+AoEbCO87C2aeqAgOMCYu9mz4KeiC12YfESW5DyNjpqmo1zfHK5zYip1FEML9OcZHDEHO9R/1nBqemMQnN6bMh5BHK4KPnlb0ASqkgJvjbgynZhly9nZ1YCMBT1rRsOZysmX2sXd1UOQKBgQCa5H8s422+lTb63N25Kj8p6g97rqaHB0EdaH+vrbesLrQigT9ufBLyJMIMciqnMHjyxNWed2yk26Q8+9JhkYfmn8zITF7tlvLCqRnt09nGAAivW5aXMBl/FKC/lWXpe/TN0he0HOkCs7xCgTM/lP7VkORsfB9+ElwpE5CcgO74oQKBgGI1bOHD4lCUvqaor9sPUgAp8hperAMkE6FaVz/mXy10fSzFBXucfSjC6yA/Rjs+tHZq6hpdfmSQ75cICzOZfRRGmUCq4FGro8sLsMTi6KgM8J46MH2oT+zA47vNlzd+lZaIU6A9XKg7vf+58VBdJZLYSMJMNQ2UHY7m7zqrv4ol
+#  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAksH9xo8jLLAfRBT2zdZt2T1NzhKwDJvCODAjbuB7/SW03H6rdDg3xAJvTsHw+V944GxIHSF08bEWOw2IUB4TajZOwkMkgvFNQp3FPLYjRrJHGhT1DxXTiel+iC0ww/UE5VoH5wZIyljchJM5N/L75PGgfIve7OjAZ7b/OJAmbvfwQoIP+HykKhFMfueB/kZbNctwY4V8KR+Y1mMyeYJN+Xhw6H6CIAmxS9NZmt4J2eisCW4X1nzOUKqJscUv/qsPlWLRLGpXAcZjt83uOh4brw/Q2j+HnP+GAYOLknL22faaEbGIYMbevziaNFJfjoZONnGSCJO2j6s9LxVC9EVVCwIDAQAB
+#  notifyUrl: http://zu65uk.natappfree.cc/alipay/notify
+
+
+

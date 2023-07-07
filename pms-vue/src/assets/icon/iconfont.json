@@ -1,0 +1,142 @@
+{
+  "id": "4022909",
+  "name": "pms",
+  "font_family": "iconfont",
+  "css_prefix_text": "pms-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "29838982",
+      "name": "个人信息管理",
+      "font_class": "personal",
+      "unicode": "e7d5",
+      "unicode_decimal": 59349
+    },
+    {
+      "icon_id": "145485",
+      "name": "充值",
+      "font_class": "chongzhi",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "339472",
+      "name": "维修",
+      "font_class": "weixiu",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "605958",
+      "name": "iconfont-jiesuan",
+      "font_class": "jiesuan",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "1048471",
+      "name": "业主报修",
+      "font_class": "baoxiu",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "1189888",
+      "name": "房产",
+      "font_class": "fangchan",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "1727591",
+      "name": "406报表-线性",
+      "font_class": "baobiao",
+      "unicode": "e902",
+      "unicode_decimal": 59650
+    },
+    {
+      "icon_id": "2378423",
+      "name": "企业总部",
+      "font_class": "zongbu",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "6992715",
+      "name": "故障报修1",
+      "font_class": "baoxiu1",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "8453441",
+      "name": "缴费",
+      "font_class": "jiaofei",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
+      "icon_id": "11719608",
+      "name": "门禁",
+      "font_class": "menjin",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "13675409",
+      "name": "ico_ziyuanguanli",
+      "font_class": "ziyuanguanli",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "20468579",
+      "name": "车位",
+      "font_class": "chewei",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "3161597",
+      "name": "管理员_角色管理",
+      "font_class": "jiaoseguanli",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "5077701",
+      "name": "收费管理",
+      "font_class": "shoufeiguanli",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "13955643",
+      "name": "费用设置",
+      "font_class": "feiyongshezhi",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "15353859",
+      "name": "系统管理",
+      "font_class": "xitongguanli",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "33078806",
+      "name": "充值缴费",
+      "font_class": "chongczhi",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "10593837",
+      "name": "用户-角色-用户名-单人_jurassic",
+      "font_class": "userguanli",
+      "unicode": "e6a5",
+      "unicode_decimal": 59045
+    }
+  ]
+}
